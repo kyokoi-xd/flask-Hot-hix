@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section id="main">
+        <h1>Добро пожаловать на фабрику HOT-HIX</h1>
+        <p>Преимущества работы с нами...</p>
+    </section>
+
+    <section id="catalog">
+        <h2>Каталог продукции</h2>
+        <p>Скачайте наш каталог продукции</p>
+        <a href="{{ url_for('download_catalog') }}" download="1.pdf">Скачать каталог</a>
+    </section>
+
+    <section id="offers">
+        <h2>Наши предложения</h2>
+        <p>Участвуйте в нашей партнерской программе...</p>
+        <p>Работайте с нами на выгодных условиях...</p>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Телефон: +7 911 083 0264 (Всеволод Александрович)</p>
+        <p>Отправьте заявку или позвоните нам, чтобы обсудить детали.</p>
+    </section>
+
+    <section id="social">
+        <h2>Мы в соцсетях</h2>
+        <p>
+            <a href="https://www.instagram.com/hot_hix_?igsh=MW54a3VlbG54N2ozaw==&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://vk.com/club223950412" target="_blank"><i class="fab fa-vk"></i></a>
+            <a href="https://t.me/HotHix" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://wa.me/79110830264" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </p>
+    </section>
+    {% endblock %}
