@@ -1,36 +1,76 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-    <section id="main">
-        <h1>Добро пожаловать на фабрику HOT-HIX</h1>
-        <p>Преимущества работы с нами...</p>
-    </section>
+<section id="home" class="section__container" style="background-image: url('static/images/bg_home_dark.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+    <h1> ПОШИВ ОДЕЖДЫ ОПТОМ </h1>
+    <div class="header-decor">
+        <svg width="100" height="10">
+            <line x1="0" y1="5" x2="100" y2="5" stroke="#004d40" stroke-width="2" />
+        </svg>
+    </div>
+    <p class="section__description"> 
+        Работаем с различными видами материалов и одежды <br>
+        Отшиваем пробные образцы <br>
+        Шьем одежду оптом | партии от 100 шт <br>
+        Работаем по договору
+    </p>
 
-    <section id="catalog">
-        <h2>Каталог продукции</h2>
-        <p>Скачайте наш каталог продукции</p>
-        <a href="{{ url_for('download_catalog') }}" download="1.pdf">Скачать каталог</a>
-    </section>
+</section>
 
-    <section id="offers">
-        <h2>Наши предложения</h2>
-        <p>Участвуйте в нашей партнерской программе...</p>
-        <p>Работайте с нами на выгодных условиях...</p>
-    </section>
+<section id= "main" class="section__container">
+    <h2 class="section__header">HOT-HIX: Ваш надежный партнер в производстве одежды</h1>
+        <div class="header-decor">
+            <svg width="100" height="10">
+                <line x1="0" y1="5" x2="100" y2="5" stroke="#004d40" stroke-width="2" />
+            </svg>
+        </div>
+    <p class="section__description">
+        Мы – швейная фабрика с более чем 10-летним опытом. Производим высококачественную одежду для детей, женщин и мужчин,
+        используя передовые технологии и строгий контроль качества на всех этапах.
+    </p>
+</section>
 
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>Телефон: +7 911 083 0264 (Всеволод Александрович)</p>
-        <p>Отправьте заявку или позвоните нам, чтобы обсудить детали.</p>
-    </section>
+<section class="section__container">
+    <h2 class="section__header">Наши преимущества</h2>
+    <div class="advantages__grid">
+        <div class="advantage__item">
+            <i class="fas fa-cogs"></i>
+            <h3>Современное оборудование</h3>
+            <p>Мы используем только передовые машины для производства, что гарантирует высокое качество изделий.</p>
+        </div>
+        <div class="advantage__item">
+            <i class="fas fa-users"></i>
+            <h3>Опытная команда</h3>
+            <p>Наша команда швей и специалистов обеспечивает качество на каждом этапе производства.</p>
+        </div>
+        <div class="advantage__item">
+            <i class="fas fa-truck"></i>
+            <h3>Скорость и точность</h3>
+            <p>Сроки выполнения заказов – от 2 до 7 дней в зависимости от сложности модели.</p>
+        </div>
+    </div>
+</section>
 
-    <section id="social">
-        <h2>Мы в соцсетях</h2>
-        <p>
-            <a href="https://www.instagram.com/hot_hix_?igsh=MW54a3VlbG54N2ozaw==&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://vk.com/club223950412" target="_blank"><i class="fab fa-vk"></i></a>
-            <a href="https://t.me/HotHix" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-            <a href="https://wa.me/79110830264" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </p>
-    </section>
-    {% endblock %}
+<section class="section__container">
+    <h2 class="section__header">Как мы работаем</h2>
+    <div class="process__steps">
+        <div class="step">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Детали заказа</h3>
+            <p>Отправьте любым удобным для вас способом изображения изделий, их краткое описание с указанием материалов и фурнитуры. Уточните размеры тиража, размерные ряды, а также желаемые сроки.</p>
+        </div>
+        <div class="step">
+            <i class="fas fa-scissors"></i>
+            <h3>Выбор тканей</h3>
+            <p>Мы используем только качественные ткани, соответствующие стандартам безопасности и комфорта.</p>
+        </div>
+        <div class="step">
+            <i class="fas fa-ruler"></i>
+            <h3>Пошив и контроль качества</h3>
+            <p>Наши опытные швеи и специалисты строго следят за качеством каждого изделия.</p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
