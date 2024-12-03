@@ -80,6 +80,11 @@ nav {
     color:#ffffff;
 }
 
+#main {
+    background-color: var(--primary-color-light);
+    border-radius: 10px;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
 
