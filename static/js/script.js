@@ -91,6 +91,7 @@ nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % items.length;
     updateCarousel();
 });
+<<<<<<< HEAD
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -101,3 +102,5 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.disabled = !checkbox.checked; // Включаем кнопку, если чекбокс активен
     });
 });
+=======
+>>>>>>> 777e922d9ca908813f132c0b1e4c3e56a4026a20

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, render_template, redirect, request, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
@@ -17,11 +18,17 @@ app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 
 
 mail = Mail(app)
+=======
+from flask import Flask, render_template
+
+app = Flask(__name__)
+>>>>>>> 777e922d9ca908813f132c0b1e4c3e56a4026a20
 
 @app.route("/")
 def home():
     return render_template("home.html")
 
+<<<<<<< HEAD
 @app.route("/privacy")
 def privacy():
     return render_template("privacy.html")
@@ -58,5 +65,7 @@ def send_form():
     return redirect('/')
     
 
+=======
+>>>>>>> 777e922d9ca908813f132c0b1e4c3e56a4026a20
 if __name__ == "__main__":
     app.run(debug=True)  # Не забыть перед открытием выключить
