@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="home" class="section__container" style="background-image: url('static/images/bg_home_dark.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+    <h1> ПОШИВ ОДЕЖДЫ ОПТОМ </h1>
+    <div class="header-decor">
+        <svg width="100" height="10">
+            <line x1="0" y1="5" x2="100" y2="5" stroke="#004d40" stroke-width="2" />
+        </svg>
+    </div>
+    <p class="section__description"> 
+        Работаем с различными видами материалов и одежды <br>
+        Отшиваем пробные образцы <br>
+        Шьем одежду оптом | партии от 100 шт <br>
+        Работаем по договору
+    </p>
+
+</section>
+
+<div class="header-decor">
+    <svg width="100%" height="10">
+        <line x1="10%" y1="5" x2="90%" y2="5" stroke="#004d40" stroke-width="2" stroke-opacity="0.3"/>
+    </svg>
+</div>
+
+<section id= "main" class="section__container">
+    <h2 class="section__header">HOT-HIX: Ваш надежный партнер в производстве одежды</h1>
+    <p class="section__description">
+        Мы – швейная фабрика с более чем 10-летним опытом. Производим высококачественную одежду для детей, женщин и мужчин,
+        используя передовые технологии и строгий контроль качества на всех этапах.
+    </p>
+</section>
+
+<div class="header-decor">
+    <svg width="100%" height="10">
+        <line x1="10%" y1="5" x2="90%" y2="5" stroke="#004d40" stroke-width="2" stroke-opacity="0.3"/>
+    </svg>
+</div>
+
+<section class="section__container">
+    <h2 class="section__header">Наши преимущества</h2>
+    <div class="advantages__grid">
+        <div class="advantage__item">
+            <i class="fas fa-cogs"></i>
+            <h3>Современное оборудование</h3>
+            <p>Мы используем только передовые машины для производства, что гарантирует высокое качество изделий.</p>
+        </div>
+        <div class="advantage__item">
+            <i class="fas fa-users"></i>
+            <h3>Опытная команда</h3>
+            <p>Наша команда швей и специалистов обеспечивает качество на каждом этапе производства.</p>
+        </div>
+        <div class="advantage__item">
+            <i class="fas fa-truck"></i>
+            <h3>Скорость и точность</h3>
+            <p>Сроки выполнения заказов – от 2 до 7 дней в зависимости от сложности модели.</p>
+        </div>
+    </div>
+</section>
+
+<div class="header-decor">
+    <svg width="100%" height="10">
+        <line x1="10%" y1="5" x2="90%" y2="5" stroke="#004d40" stroke-width="2" stroke-opacity="0.3"/>
+    </svg>
+</div>
+
+<section class="section__container">
+    <h2 class="section__header">Схема работы</h2>
+    <div class="process__steps">
+        <div class="step">
+            <i class="fas fa-comments"></i>
+            <h3>Детали заказа</h3>
+            <p>Вы присылаете фото изделий, описание моделей, тираж, размерные ряды и желаемые сроки. Мы уточняем все детали заказа.</p>
+        </div>
+        <div class="step">
+            <i class="fas fa-file-signature"></i>
+            <h3>Коммерческое предложение и договор</h3>
+            <p>На основе ваших данных мы составляем предложение с ценой и сроками. После согласования подписываем договор.</p>
+        </div>
+        <div class="step">
+            <i class="fas fa-truck"></i>
+            <h3>Производство и доставка</h3>
+            <p>Мы шьём партию, выполняем контроль качества и, при необходимости, организуем доставку готовых изделий.</p>
+        </div>
+    </div>
+</section>
+
+<div class="header-decor">
+    <svg width="100%" height="10">
+        <line x1="10%" y1="5" x2="90%" y2="5" stroke="#004d40" stroke-width="2" stroke-opacity="0.3"/>
+    </svg>
+</div>
+
+<section id="catalog" class="catalog__section">
+    <h2 class="section__header">Каталог продукции</h2>
+
+    
+    <div class="catalog__items">
+        <!-- Мужская коллекция -->
+    <div class="catalog__item" style="background-image: url('/static/images/menswear-bg.jpg');">
+        <h3 class="catalog__title">Мужская коллекция</h3>
+        <p class="catalog__description">Ознакомьтесь с нашим ассортиментом мужской одежды: стильной, удобной и качественной.</p>
+        <button class="btn catalog__btn" onclick="openPDF('/static/files/1.pdf')">Смотреть каталог</button>
+    </div>
+
+    <!-- Женская коллекция -->
+    <div class="catalog__item" style="background-image: url('/static/images/womenswear-bg.jpg');">
+        <h3 class="catalog__title">Женская коллекция</h3>
+        <p class="catalog__description">Премиальная женская одежда, созданная с заботой о каждой детали.</p>
+        <button class="btn catalog__btn" onclick="openPDF('/static/files/womenswear.pdf')">Смотреть каталог</button>
+    </div>
+
+    <!-- Детская коллекция -->
+    <div class="catalog__item" style="background-image: url('/static/images/kidswear-bg.jpg');">
+        <h3 class="catalog__title">Детская коллекция</h3>
+        <p class="catalog__description">Одежда для детей: яркая, комфортная и безопасная.</p>
+        <button class="btn catalog__btn" onclick="openPDF('/static/files/kidswear.pdf')">Смотреть каталог</button>
+    </div>
+    </div>
+</section>
+
+<!-- PDF Viewer Modal -->
+<div id="pdfViewer" class="pdf-viewer">
+    <div class="pdf-container">
+        <button id="closeButton" class="close-button">&times;</button>
+        <div class="pdf-content">
+            <canvas id="pdfCanvas"></canvas>
+        </div>
+    </div>
+</div>
+
+<<<<<<< HEAD
+<div class="header-decor">
+    <svg width="100%" height="10">
+        <line x1="10%" y1="5" x2="90%" y2="5" stroke="#004d40" stroke-width="2" stroke-opacity="0.3"/>
+    </svg>
+</div>
+
+=======
+>>>>>>> 777e922d9ca908813f132c0b1e4c3e56a4026a20
+<section id="faq" class="faq__section">
+    <h2 class="section__header">Часто задаваемые вопросы</h2>
+    <div class="faq__item">
+        <div class="faq__question">
+            <span>Какая у вас производственная мощность?</span>
+            <i class="faq__icon">&#9660;</i>
+        </div>
+        <div class="faq__answer">
+            <p>Мы производим до 50 000 единиц продукции в месяц. В нашем штате 60 опытных швей.</p>
+        </div>
+    </div>
+    <div class="faq__item">
+        <div class="faq__question">
+            <span>Сколько времени занимает создание образца?</span>
+            <i class="faq__icon">&#9660;</i>
+        </div>
+        <div class="faq__answer">
+            <p>Создание нового образца “с нуля” занимает 5–7 дней. По готовой модели — 2–3 дня.</p>
+        </div>
+    </div>
+    <div class="faq__item">
+        <div class="faq__question">
+            <span>Какие этапы включает цикл создания новой модели одежды?</span>
+            <i class="faq__icon">&#9660;</i>
+        </div>
+        <div class="faq__answer">
+            <p>Описание цикла создания новой модели: Подбор ткани, разработка лекала, пошив образца, примерка и доставка в Россию (1–2 дня Авиа).</p>
+        </div>
+    </div>
+    <div class="faq__item">
+        <div class="faq__question">
+            <span>Есть ли у вас представитель в России?</span>
+            <i class="faq__icon">&#9660;</i>
+        </div>
+        <div class="faq__answer">
+            <p>Да, у нас есть представитель в Санкт-Петербурге.</p>
+        </div>
+    </div>
+</section>
+
+<<<<<<< HEAD
+<div class="header-decor">
+    <svg width="100%" height="10">
+        <line x1="10%" y1="5" x2="90%" y2="5" stroke="#004d40" stroke-width="2" stroke-opacity="0.3"/>
+    </svg>
+</div>
+
+=======
+>>>>>>> 777e922d9ca908813f132c0b1e4c3e56a4026a20
+<section id="offers" class="offers__section">
+    <h2 class="section__header">Наши предложения</h2>
+    <div class="carousel">
+        <!-- Карточка 1 -->
+        <div class="carousel__item">
+            <h3>Реферальная программа</h3>
+            <p>Станьте участником партнерской программы! Процентная выплата — 2% от общей суммы сделки.</p>
+            <button class="btn">Подробнее</button>
+        </div>
+        <!-- Карточка 2 -->
+        <div class="carousel__item">
+            <h3>Индивидуальный подход</h3>
+            <p>Готовы рассмотреть пошив под реализацию до 1500 единиц сроком до 3 месяцев.</p>
+            <button class="btn">Узнать условия</button>
+        </div>
+        <!-- Карточка 3 -->
+        <div class="carousel__item">
+            <h3>Снижение себестоимости</h3>
+            <p>Если вы уже работаете с фабрикой, предлагаем Вам уменьшить себестоимость изделий на 1 единицу от 20 рублей до 120 рублей в зависимости от модели, обратившись к нашему менеджеру.</p>
+            <button class="btn">Связаться</button>
+        </div>
+    </div>
+    <div class="carousel__controls">
+        <button class="carousel__btn prev">‹</button>
+        <button class="carousel__btn next">›</button>
+    </div>
+<<<<<<< HEAD
+</section>
+
+<div class="header-decor">
+    <svg width="100%" height="10">
+        <line x1="10%" y1="5" x2="90%" y2="5" stroke="#004d40" stroke-width="2" stroke-opacity="0.3"/>
+    </svg>
+</div>
+
+<section id="contacts" class="contacts__section">
+    <div class="contacts__container">
+        <!-- Форма заявки -->
+        <div class="form__wrapper">
+            <h2 class="section__header">Свяжитесь с нами</h2>
+            <form class="contact__form" action="/send-form" method="POST">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+
+                <label for="details">Детали заказа</label>
+                <textarea id="details" name="details" placeholder="Опишите ваш заказ" required></textarea>
+
+                <div class="form__privacy">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">Я соглашаюсь с <a href="/privacy" target="_blank">политикой конфиденциальности</a></label>
+                </div>
+                <button type="submit" class="btn submit__btn" disabled>Отправить заявку</button>
+            </form>
+        </div>
+
+        <!-- Контактная информация -->
+        <div class="contacts__info">
+            <h3 class="contacts__header">Контактная информация</h3>
+
+            <div class="contact__item">
+                <p><strong>Телефон:</strong> <a href="tel:+79110830264">+7 911 083 0264</a></p>
+                <p><small>Доступно в:</small> <a href="#">WhatsApp</a>, <a href="#">Telegram</a></p>
+            </div>
+
+            <div class="contact__item">
+                <p><strong>Почта:</strong> <a href="mailto:poshiv.odejdy@bk.ru">poshiv.odejdy@bk.ru</a></p>
+            </div>
+
+            <div class="social__links">
+                <h4>Наши соцсети:</h4>
+                <a href="https://vk.com/club223950412" class="social__icon" title="VK"><i class="fab fa-vk"></i>VK</a>
+                <a href="https://www.instagram.com/hot_hix_?igsh=MW54a3VlbG54N2ozaw==&utm_source=qr" class="social__icon" title="Instagram"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="https://t.me/HotHix" class="social__icon" title="Telegram"><i class="fab fa-telegram"></i>Telegram</a>
+                <a href="https://wa.me/79110830264" class="social__icon" title="WhatsApp"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+=======
+</section>    
+>>>>>>> 777e922d9ca908813f132c0b1e4c3e56a4026a20
+    
+{% endblock %}
