@@ -2,11 +2,12 @@ from flask import Flask, render_template, redirect, request, flash
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
+import secrets
 
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY')
+app.secret_key = secrets.token_hex(16)
 
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
 app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
@@ -41,7 +42,7 @@ def send_form():
         msg = Message(
             subject='Новая заявка с сайта',
             sender=app.config['MAIL_USERNAME'],
-            recipients=['danilich.huilich@gmail.com']
+            recipients=['hot-hix@mail.ru']
         )
         msg.body = f"""
         Имя: {name}
